@@ -1,0 +1,102 @@
+button#songs {
+    cursor: pointer;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top: none;
+    border-bottom: none;
+    background-color: #b8f1ff;
+    transition: 0.3s;
+    color: black
+}
+
+button#songs:hover {
+    background-color: #339197;
+    color: white;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+}
+
+#songTitle {
+    text-align: center;
+    font-size: 30px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 700px;
+    height: 50px;
+    background: linear-gradient(to right, rgb(0, 140, 255), pink);
+    color: white;
+}
+
+#volume {
+    width: 20px;
+}
+
+#rand {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+#play {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 24px solid transparent;
+    border-left: 45px solid #686868;
+    border-bottom: 24px solid transparent;
+    background-color: white;
+    margin-left: 15px;
+}
+
+.sound {
+    margin-left: 350px;
+}
+
+.sbtn {
+    margin-left: -560px;
+    height: 100px;
+    width: 60px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#eom {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-top-left-radius: 30%;
+}
+
+#ont {
+    margin-top: 100px;
+    background-color: rgb(255, 50, 94);
+    color: white;
+    border-left: 2px solid black;
+}
+
+#ots {
+    margin-top: 200px;
+    background-color: rgb(255, 234, 225);
+    color: rgb(255, 160, 157);
+    border-left: 2px solid black;
+}
+
+#otr {
+    margin-top: 300px;
+    background-color: rgb(153, 153, 153);
+    color: rgb(109, 255, 128);
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 30%;
+}

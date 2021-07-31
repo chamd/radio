@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>라디오</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/main.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./css/main.css">
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+  <div class="outer">
+    <p id="songTitle">Airplane</p>
+  </div>
+
+  <div class="outer">
+    <button onclick="play();" id="play"></button>
+  </div>
+
+  <div class="outer">
+    <div class="sound">
+      <img src="./img/volume.png" id="volume">
+      <input type="range" min="0" max="100" value="50" id="sound" onchange="sound();">
+    </div>
+  </div>
+
+  <div class="outer">
+    <img src="./img/rand.png" onclick="change(-1);" id="rand">
+  </div>
+
+  <br><br>
+
+  <div class="outer">
+    <button class="sbtn" id="eom" onclick="lists(0);">EOM</button>
+    <button class="sbtn" id="ont" onclick="lists(1);">ONT</button>
+    <button class="sbtn" id="ots" onclick="lists(2);">OTS</button>
+    <button class="sbtn" id="otr" onclick="lists(3);">OTR</button>
+    <div id="songList"></div>
+  </div>
+
+</body>
+
+</html>
