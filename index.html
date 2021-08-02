@@ -7,6 +7,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/main.js" charset="utf-8"></script>
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/color.css">
+  <link rel="stylesheet" href="./css/raore.css">
 
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" href="favicon.ico">
@@ -23,14 +25,26 @@
   </div>
 
   <div class="outer">
+    <p id="time">0:0/0:0</p>
     <div class="sound">
-      <img src="./img/volume.png" id="volume">
-      <input type="range" min="0" max="100" value="50" id="sound" onchange="sound();">
+      <img src="./img/volume.png" id="volume" onclick="mute();">
+      <input type="range" min="0" max="100" value="50" id="sound" oninput="sound(this.value);" onchange="sound(this.value);">
     </div>
   </div>
 
+  <br>
+
   <div class="outer">
     <img src="./img/rand.png" onclick="change(-1);" id="rand">
+    &emsp;&emsp;&emsp;&emsp;
+
+    <img src="img/shuffle.png" id="rr">
+    &nbsp;
+    <input type="checkbox" id="rri" onclick="raore();">
+    <label id="raore" for="rri"></label>
+    &nbsp;
+    <img src="img/repeat.png" id="rr">
+
   </div>
 
   <br><br>

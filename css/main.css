@@ -1,22 +1,3 @@
-button#songs {
-    cursor: pointer;
-    width: 500px;
-    height: 50px;
-    font-size: 20px;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-top: none;
-    border-bottom: none;
-    background-color: #b8f1ff;
-    transition: 0.3s;
-    color: black
-}
-
-button#songs:hover {
-    background-color: #339197;
-    color: white;
-}
-
 .outer {
     display: flex;
     justify-content: center;
@@ -38,8 +19,8 @@ button#songs:hover {
 }
 
 #rand {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
 }
 
@@ -56,7 +37,15 @@ button#songs:hover {
 }
 
 .sound {
-    margin-left: 350px;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 300px;
+}
+
+#time {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: -180px;
 }
 
 .sbtn {

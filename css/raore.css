@@ -1,0 +1,37 @@
+#rri {
+    display: none;
+}
+
+#raore {
+    margin-top: 8px;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    background-color: #0084ff;
+    border-radius: 100px;
+}
+
+#raore::before {
+    content: " ";
+    display: block;
+    width: 21px;
+    height: 21px;
+    left: 2px;
+    bottom: 2px;
+    position: absolute;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    border-radius: 100px;
+}
+
+#rri:checked + #raore:before {
+    transform: translateX(25px);
+}
+
+#rr {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+}

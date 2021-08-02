@@ -1,0 +1,59 @@
+button#songs {
+    cursor: pointer;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    border-top: none;
+    border-bottom: none;
+    transition: 0.3s;
+}
+
+
+.color0 {
+    border-left: 7px solid rgb(26, 26, 26);
+    border-right: 7px solid rgb(26, 26, 26);
+    background-color: #464646;
+    color: rgb(255, 255, 255);
+}
+
+.color1 {
+    border-left: 7px solid rgb(255, 50, 94);
+    border-right: 7px solid rgb(255, 50, 94);
+    background-color: rgb(255, 123, 152);
+    color: black;
+}
+
+.color2 {
+    border-left: 7px solid rgb(255, 234, 225);
+    border-right: 7px solid rgb(255, 234, 225);
+    background-color: rgb(255, 213, 195);
+    color: black;
+}
+
+.color3 {
+    border-left: 7px solid rgb(153, 153, 153);
+    border-right: 7px solid rgb(153, 153, 153);
+    background-color: #c0c0c0;
+    color: black;
+}
+
+
+.color0:hover {
+    background-color: #8b8b8b;
+    color: rgb(0, 0, 0);
+}
+
+.color1:hover {
+    background-color: rgb(209, 79, 107);
+    color: rgb(255, 255, 255);
+}
+
+.color2:hover {
+    background-color: rgb(209, 157, 135);
+    color: rgb(255, 255, 255);
+}
+
+.color3:hover {
+    background-color: #818181;
+    color: rgb(255, 255, 255);
+}
