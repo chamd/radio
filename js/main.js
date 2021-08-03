@@ -132,7 +132,7 @@ function lists(list) {
         e[i].style.transition = ".5s";
         e[i].style.width = "400px";
         e[i].style.transform = `translateY(-${i * 50}px)`;
-        setTimeout(timeL, 1, e, i);
+        setTimeout(timeL, 100, e, i);
       }
       close = 0;
     }
