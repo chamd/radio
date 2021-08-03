@@ -5,6 +5,7 @@ var muted = 0;
 var npL = 0;
 var np = 0;
 var repeat = 0;
+var close = 0;
 
 music.src = "./music/단콘/Airplane.mp3";
 
@@ -107,7 +108,41 @@ function lists(list) {
         document.getElementById("songList").innerHTML += `<button class=\"color3\" id=\"songs\" onclick=\"change(${i})\">${data[list].otr[i].split(".mp3")[0]}</button><br id=\"songs\">`;
       }
     }
+    if (close == 1) {
+      document.getElementById("eom").style.borderTopRightRadius = "0";
+      document.getElementById("otr").style.borderBottomRightRadius = "0";
+
+      var e = document.querySelectorAll(".sbtn");
+      for (var i = 0; i < e.length; i++) {
+        e[i].style.transition = ".5s";
+        e[i].style.width = "60px";
+        e[i].style.height = "100px";
+        e[i].style.borderRight = "none";
+        e[i].style.transform = `translate(0, 0)`;
+        setTimeout(() => {
+          document.getElementById("eom").textContent = "EOM";
+          document.getElementById("ont").textContent = "ONT";
+          document.getElementById("ots").textContent = "OTS";
+          document.getElementById("otr").textContent = "OTR";
+        }, 50);
+      }
+
+      var e = document.querySelectorAll("button#songs");
+      for (var i = 0; i < e.length; i++) {
+        e[i].style.transition = ".5s";
+        e[i].style.width = "400px";
+        e[i].style.transform = `translateY(-${i * 50}px)`;
+        setTimeout(timeL, 1, e, i);
+      }
+      close = 0;
+    }
   })
+}
+
+function timeL(e, i) {
+  e[i].style.width = "500px";
+  e[i].style.transform = `translateY(0)`;
+  document.getElementById("close").style.transform = "translateX(0)";
 }
 
 music.addEventListener("ended", function () {
@@ -172,4 +207,40 @@ function raore() {
   } else {
     repeat = 0;
   }
+}
+
+function closeL() {
+  document.getElementById("eom").style.borderTopRightRadius = "30px";
+  document.getElementById("otr").style.borderBottomRightRadius = "30px";
+
+  var e = document.querySelectorAll(".sbtn");
+  for (var i = 0; i < e.length; i++) {
+    e[i].style.transition = ".5s";
+    e[i].style.width = "500px";
+    e[i].style.height = "70px";
+    e[i].style.borderRight = "2px solid black";
+    e[i].style.transform = `translate(280px, -${i * 30}px)`;
+    setTimeout(() => {
+      document.getElementById("eom").textContent = "Eyes On Me";
+      document.getElementById("ont").textContent = "Oneiric Theater";
+      document.getElementById("ots").textContent = "One The Story";
+      document.getElementById("otr").textContent = "Others";
+    }, 100);
+  }
+
+  document.getElementById("close").style.transform = "translateX(-50px)";
+  document.getElementById("close").style.transition = ".5s";
+
+  var e = document.querySelectorAll("button#songs");
+  for (var i = 0; i < e.length; i++) {
+    e[i].style.transition = ".5s";
+    e[i].style.width = "400px";
+    e[i].style.transform = `translateY(-${i * 50}px)`;
+    setTimeout(() => {
+      document.querySelector("button#songs").textContent = "";
+    }, 700);
+  }
+
+  close = 1;
+
 }

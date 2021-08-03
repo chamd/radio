@@ -1,3 +1,7 @@
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
 .outer {
     display: flex;
     justify-content: center;
@@ -57,35 +61,43 @@
     font-size: 20px;
     position: absolute;
     cursor: pointer;
+    border-left: 2px solid black;
+    z-index: 3;
 }
 
 #eom {
     background-color: rgb(26, 26, 26);
     color: white;
-    border-left: 2px solid black;
     border-top: 2px solid black;
-    border-top-left-radius: 30%;
+    border-top-left-radius: 30px;
 }
 
 #ont {
     margin-top: 100px;
     background-color: rgb(255, 50, 94);
     color: white;
-    border-left: 2px solid black;
 }
 
 #ots {
     margin-top: 200px;
     background-color: rgb(255, 234, 225);
     color: rgb(255, 160, 157);
-    border-left: 2px solid black;
 }
 
 #otr {
     margin-top: 300px;
     background-color: rgb(153, 153, 153);
     color: rgb(109, 255, 128);
-    border-left: 2px solid black;
     border-bottom: 2px solid black;
-    border-bottom-left-radius: 30%;
+    border-bottom-left-radius: 30px;
+}
+
+#close {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    margin-top: -15px;
+    margin-left: 430px;
+    z-index: 2;
+    cursor: pointer;
 }

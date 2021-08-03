@@ -5,7 +5,8 @@ button#songs {
     font-size: 20px;
     border-top: none;
     border-bottom: none;
-    transition: 0.3s;
+    transition: 0.5s;
+    z-index: 1;
 }
 
 
