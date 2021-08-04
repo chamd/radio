@@ -7,15 +7,22 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 
+@font-face {
+    font-family: 'go';
+    src: url('../font/go.ttf');
+}
+
 #songTitle {
+    padding-top: 10px;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    width: 800px;
+    width: 550px;
     height: 50px;
     background: linear-gradient(to right, rgb(0, 140, 255), pink);
     color: white;
+    font-family: 'go';
 }
 
 #volume {
@@ -36,7 +43,7 @@ body::-webkit-scrollbar {
     border-top: 24px solid transparent;
     border-left: 45px solid #686868;
     border-bottom: 24px solid transparent;
-    background-color: white;
+    background-color: transparent;
     margin-left: 15px;
 }
 
@@ -44,12 +51,6 @@ body::-webkit-scrollbar {
     position: absolute;
     margin-top: -35px;
     margin-left: 300px;
-}
-
-#time {
-    position: absolute;
-    margin-top: -35px;
-    margin-left: -180px;
 }
 
 .sbtn {
@@ -63,6 +64,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
     border-left: 2px solid black;
     z-index: 3;
+    font-family: 'go';
 }
 
 #eom {
@@ -100,4 +102,17 @@ body::-webkit-scrollbar {
     margin-left: 430px;
     z-index: 2;
     cursor: pointer;
+}
+
+@font-face {
+    font-family: 'd7';
+    src: url('../font/d72.ttf');
+}
+
+#time {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -270px;
+    font-family: d7;
+    font-size: 30px;
 }

@@ -26,7 +26,7 @@ function play() {
     document.getElementById("play").style.borderTop = "24px solid transparent";
     document.getElementById("play").style.borderLeft = "45px solid #686868";
     document.getElementById("play").style.borderBottom = "24px solid transparent";
-    document.getElementById("play").style.backgroundColor = "white";
+    document.getElementById("play").style.backgroundColor = "transparent";
     document.getElementById("play").style.marginLeft = "15px";
     music.pause();
     musicP = 0;
@@ -129,7 +129,7 @@ function lists(list) {
 
       var e = document.querySelectorAll("button#songs");
       for (var i = 0; i < e.length; i++) {
-        e[i].style.transition = ".5s";
+        e[i].style.transition = ".4s";
         e[i].style.width = "400px";
         e[i].style.transform = `translateY(-${i * 50}px)`;
         setTimeout(timeL, 100, e, i);
@@ -160,7 +160,7 @@ function stop() {
   document.getElementById("play").style.border = "none";
   document.getElementById("play").style.borderLeft = "15px solid #686868";
   document.getElementById("play").style.borderRight = "15px solid #686868";
-  document.getElementById("play").style.backgroundColor = "white";
+  document.getElementById("play").style.backgroundColor = "transparent";
   document.getElementById("play").style.marginLeft = "0";
 }
 
@@ -192,7 +192,20 @@ function time() {
     "durationS": time.duration % 60
   }
 
-  document.getElementById("time").textContent = `${time.timeM}:${time.timeS}/${time.durationM}:${time.durationS}`;
+  if (0 <= time.timeS && time.timeS <= 9) {
+    if (0 <= time.durationS && time.durationS <= 9) {
+      document.getElementById("time").textContent = `${time.timeM}:0${time.timeS} / ${time.durationM}:0${time.durationS}`;
+    } else {
+      document.getElementById("time").textContent = `${time.timeM}:0${time.timeS} / ${time.durationM}:${time.durationS}`;
+    }
+  } else {
+    if (0 <= time.durationS && time.durationS <= 9) {
+      document.getElementById("time").textContent = `${time.timeM}:${time.timeS} / ${time.durationM}:0${time.durationS}`;
+    } else {
+      document.getElementById("time").textContent = `${time.timeM}:${time.timeS} / ${time.durationM}:${time.durationS}`;
+    }
+  }
+
 }
 
 function timeStart() {
@@ -233,12 +246,12 @@ function closeL() {
 
   var e = document.querySelectorAll("button#songs");
   for (var i = 0; i < e.length; i++) {
-    e[i].style.transition = ".5s";
+    e[i].style.transition = ".4s";
     e[i].style.width = "400px";
     e[i].style.transform = `translateY(-${i * 50}px)`;
     setTimeout(() => {
       document.querySelector("button#songs").textContent = "";
-    }, 700);
+    }, 400);
   }
 
   close = 1;
