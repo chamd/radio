@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./css/color.css">
   <link rel="stylesheet" href="./css/raore.css">
 
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" href="favicon.ico">
 
@@ -26,17 +28,14 @@
   </div>
 
   <div class="outer">
-    <p id="time">0:00 / 0:00</p>
-    <div class="sound">
-      <img src="./img/volume.png" id="volume" onclick="mute();">
-      <input type="range" min="0" max="100" value="50" id="sound" oninput="sound(this.value);" onchange="sound(this.value);">
-    </div>
+    <p id="time">0:00&emsp;&emsp;&emsp;&emsp;0:00</p>
   </div>
 
   <br>
 
   <div class="outer">
     <img src="./img/rand.png" onclick="change(-1);" id="rand">
+
     &emsp;&emsp;&emsp;&emsp;
 
     <img src="img/shuffle.png" id="rr">
@@ -45,6 +44,11 @@
     <label id="raore" for="rri"></label>
     &nbsp;
     <img src="img/repeat.png" id="rr">
+
+    &emsp;&emsp;&emsp;&emsp;
+
+    <i class='bx bx-volume bx-md' id="volume" onclick="mute();"></i>
+
 
   </div>
 

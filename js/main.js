@@ -9,7 +9,7 @@ var close = 0;
 
 music.src = "./music/단콘/Airplane.mp3";
 
-music.volume = 0.5;
+music.volume = 0.1;
 
 lists(0);
 timeStart();
@@ -76,11 +76,6 @@ function change(mod) {
     music.play();
     musicP = 1;
   })
-}
-
-function sound(sound) {
-  var volume = parseInt(sound) / 100
-  music.volume = volume;
 }
 
 function lists(list) {
@@ -165,14 +160,31 @@ function stop() {
 }
 
 function mute() {
-  if (muted == 0) {
-    document.getElementById("volume").src = "./img/mute.png";
-    music.muted = true;
-    muted = 1;
-  } else {
-    document.getElementById("volume").src = "./img/volume.png";
-    music.muted = false;
-    muted = 0;
+  switch (muted) {
+    case 0:
+      document.getElementById("volume").classList.remove("bx-volume");
+      document.getElementById("volume").classList.add("bx-volume-low");
+      muted++;
+      music.volume = 0.3;
+      break;
+    case 1:
+      document.getElementById("volume").classList.remove("bx-volume-low");
+      document.getElementById("volume").classList.add("bx-volume-full");
+      muted++;
+      music.volume = 0.5;
+      break;
+    case 2:
+      document.getElementById("volume").classList.remove("bx-volume-full");
+      document.getElementById("volume").classList.add("bx-volume-mute");
+      muted++;
+      music.volume = 0;
+      break;
+    case 3:
+      document.getElementById("volume").classList.remove("bx-volume-mute");
+      document.getElementById("volume").classList.add("bx-volume");
+      muted = 0;
+      music.volume = 0.1;
+      break;
   }
 }
 
@@ -194,15 +206,15 @@ function time() {
 
   if (0 <= time.timeS && time.timeS <= 9) {
     if (0 <= time.durationS && time.durationS <= 9) {
-      document.getElementById("time").textContent = `${time.timeM}:0${time.timeS} / ${time.durationM}:0${time.durationS}`;
+      document.getElementById("time").textContent = `${time.timeM}:0${time.timeS}\u2003\u2003\u2003\u2003${time.durationM}:0${time.durationS}`;
     } else {
-      document.getElementById("time").textContent = `${time.timeM}:0${time.timeS} / ${time.durationM}:${time.durationS}`;
+      document.getElementById("time").textContent = `${time.timeM}:0${time.timeS}\u2003\u2003\u2003\u2003${time.durationM}:${time.durationS}`;
     }
   } else {
     if (0 <= time.durationS && time.durationS <= 9) {
-      document.getElementById("time").textContent = `${time.timeM}:${time.timeS} / ${time.durationM}:0${time.durationS}`;
+      document.getElementById("time").textContent = `${time.timeM}:${time.timeS}\u2003\u2003\u2003\u2003${time.durationM}:0${time.durationS}`;
     } else {
-      document.getElementById("time").textContent = `${time.timeM}:${time.timeS} / ${time.durationM}:${time.durationS}`;
+      document.getElementById("time").textContent = `${time.timeM}:${time.timeS}\u2003\u2003\u2003\u2003${time.durationM}:${time.durationS}`;
     }
   }
 

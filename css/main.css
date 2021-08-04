@@ -25,10 +25,6 @@ body::-webkit-scrollbar {
     font-family: 'go';
 }
 
-#volume {
-    width: 20px;
-}
-
 #rand {
     height: 40px;
     width: 40px;
@@ -45,12 +41,7 @@ body::-webkit-scrollbar {
     border-bottom: 24px solid transparent;
     background-color: transparent;
     margin-left: 15px;
-}
-
-.sound {
-    position: absolute;
-    margin-top: -35px;
-    margin-left: 300px;
+    z-index: 2;
 }
 
 .sbtn {
@@ -112,7 +103,7 @@ body::-webkit-scrollbar {
 #time {
     position: absolute;
     margin-top: -40px;
-    margin-left: -270px;
     font-family: d7;
     font-size: 30px;
+    z-index: 1;
 }
