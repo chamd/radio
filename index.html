@@ -2,74 +2,78 @@
 <html lang="kr" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>라디오</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./js/main.js" charset="utf-8"></script>
-  <script src="./js/play.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/color.css">
-  <link rel="stylesheet" href="./css/raore.css">
-  <link rel="stylesheet" href="./css/play.css">
+    <meta charset="utf-8">
+    <title>라디오</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js" charset="utf-8"></script>
+    <script src="./js/play.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/raore.css">
+    <link rel="stylesheet" href="./css/play.css">
 
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="icon" href="favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
 </head>
 
 <body>
-  
-  <div class="outer">
-    <p id="songTitle">Airplane</p>
-  </div>
 
-  <div class="outer">
-    <span class="playbtn" onclick="play();">
-      <span class="play play1"></span>
-      <span class="play play2"></span>
-    </span>
-  </div>
+    <div class="outer">
+        <p id="songTitle">Airplane</p>
+    </div>
 
-  <div class="outer">
-    <p id="time">0:00&emsp;&emsp;&emsp;&emsp;0:00</p>
-  </div>
+    <div class='outer'>
+        <img src="./img/0.jpg" id="art">
+    </div>
 
-  <br>
+    <div class="outer">
+        <span class="playbtn" onclick="play();">
+            <span class="play play1"></span>
+            <span class="play play2"></span>
+        </span>
+    </div>
 
-  <div class="outer">
-    <img src="./img/rand.png" onclick="change(-1);" id="rand">
+    <div class="outer">
+        <p id="time">0:00&emsp;&emsp;&emsp;&emsp;0:00</p>
+    </div>
 
-    &emsp;&emsp;&emsp;&emsp;
+    <br>
 
-    <img src="img/shuffle.png" id="rr">
-    &nbsp;
-    <input type="checkbox" id="rri" onclick="raore();">
-    <label id="raore" for="rri"></label>
-    &nbsp;
-    <img src="img/repeat.png" id="rr">
+    <div class="outer">
+        <img src="./img/rand.png" onclick="change(-1);" id="rand">
 
-    &emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;
 
-    <i class='bx bx-volume bx-md' id="volume" onclick="mute();"></i>
+        <img src="img/shuffle.png" id="rr">
+        &nbsp;
+        <input type="checkbox" id="rri" onclick="raore();">
+        <label id="raore" for="rri"></label>
+        &nbsp;
+        <img src="img/repeat.png" id="rr">
+
+        &emsp;&emsp;&emsp;&emsp;
+
+        <i class='bx bx-volume bx-md' id="volume" onclick="mute();"></i>
 
 
-  </div>
+    </div>
 
-  <br><br>
+    <br><br>
 
-  <div class="outer">
-    <span id="close" onclick="closeL();">&times;</span>
-  </div>
+    <div class="outer">
+        <span id="close" onclick="closeL();">&times;</span>
+    </div>
 
-  <div class="outer">
-    <button class="sbtn" id="eom" onclick="lists(0);">EOM</button>
-    <button class="sbtn" id="ont" onclick="lists(1);">ONT</button>
-    <button class="sbtn" id="ots" onclick="lists(2);">OTS</button>
-    <button class="sbtn" id="otr" onclick="lists(3);">OTR</button>
-    <div id="songList"></div>
-  </div>
+    <div class="outer">
+        <button class="sbtn" id="eom" onclick="lists(0);">EOM</button>
+        <button class="sbtn" id="ont" onclick="lists(1);">ONT</button>
+        <button class="sbtn" id="ots" onclick="lists(2);">OTS</button>
+        <button class="sbtn" id="otr" onclick="lists(3);">OTR</button>
+        <div id="songList"></div>
+    </div>
 
 </body>
 

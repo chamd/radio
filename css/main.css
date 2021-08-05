@@ -97,7 +97,11 @@ body::-webkit-scrollbar {
     cursor: default;
 }
 
-@font-face {
-    font-family: 'gor';
-    src: url('../font/gor.ttf');
+#art {
+    width: 200px;
+    border-radius: 30px;
+    transition: .5s;
+
+    margin-bottom: 0px;
+    height: 0px;
 }
