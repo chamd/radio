@@ -14,24 +14,6 @@ music.volume = 0.1;
 lists(0);
 timeStart();
 
-function play() {
-  if (musicP == 0) {
-    stop();
-    music.play();
-    musicP = 1;
-  } else if (musicP == 1) {
-    document.getElementById("play").style.width = "0";
-    document.getElementById("play").style.height = "0";
-    document.getElementById("play").style.border = "none";
-    document.getElementById("play").style.borderTop = "24px solid transparent";
-    document.getElementById("play").style.borderLeft = "45px solid #686868";
-    document.getElementById("play").style.borderBottom = "24px solid transparent";
-    document.getElementById("play").style.backgroundColor = "transparent";
-    document.getElementById("play").style.marginLeft = "15px";
-    music.pause();
-    musicP = 0;
-  }
-}
 
 function change(mod) {
 
@@ -148,16 +130,6 @@ music.addEventListener("ended", function () {
     change(-2);
   }
 });
-
-function stop() {
-  document.getElementById("play").style.width = "20px";
-  document.getElementById("play").style.height = "50px";
-  document.getElementById("play").style.border = "none";
-  document.getElementById("play").style.borderLeft = "15px solid #686868";
-  document.getElementById("play").style.borderRight = "15px solid #686868";
-  document.getElementById("play").style.backgroundColor = "transparent";
-  document.getElementById("play").style.marginLeft = "0";
-}
 
 function mute() {
   switch (muted) {

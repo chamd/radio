@@ -6,9 +6,11 @@
   <title>라디오</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/main.js" charset="utf-8"></script>
+  <script src="./js/play.js" charset="utf-8"></script>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/color.css">
   <link rel="stylesheet" href="./css/raore.css">
+  <link rel="stylesheet" href="./css/play.css">
 
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   
@@ -18,13 +20,16 @@
 </head>
 
 <body>
-
+  
   <div class="outer">
     <p id="songTitle">Airplane</p>
   </div>
 
   <div class="outer">
-    <button onclick="play();" id="play"></button>
+    <span class="playbtn" onclick="play();">
+      <span class="play play1"></span>
+      <span class="play play2"></span>
+    </span>
   </div>
 
   <div class="outer">

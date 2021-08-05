@@ -23,25 +23,13 @@ body::-webkit-scrollbar {
     background: linear-gradient(to right, rgb(0, 140, 255), pink);
     color: white;
     font-family: 'go';
+    cursor: default;
 }
 
 #rand {
     height: 40px;
     width: 40px;
     cursor: pointer;
-}
-
-#play {
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    border: none;
-    border-top: 24px solid transparent;
-    border-left: 45px solid #686868;
-    border-bottom: 24px solid transparent;
-    background-color: transparent;
-    margin-left: 15px;
-    z-index: 2;
 }
 
 .sbtn {
@@ -106,4 +94,10 @@ body::-webkit-scrollbar {
     font-family: d7;
     font-size: 30px;
     z-index: 1;
+    cursor: default;
+}
+
+@font-face {
+    font-family: 'gor';
+    src: url('../font/gor.ttf');
 }

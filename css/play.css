@@ -1,0 +1,26 @@
+.playbtn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.play {
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #686868;
+    transition: clip-path .3s ease;
+}
+
+.play1 {
+    clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+    z-index: 1;
+}
+
+.play2 {
+    clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+    z-index: 1;
+}
