@@ -7,9 +7,8 @@ button#songs {
     border-bottom: none;
     transition: 0.5s;
     z-index: 1;
-    font-family: 'go';
+    font-family: "go";
 }
-
 
 .color0 {
     border-left: 7px solid rgb(26, 26, 26);
@@ -39,7 +38,6 @@ button#songs {
     color: black;
 }
 
-
 .color0:hover {
     background-color: #8b8b8b;
     color: rgb(0, 0, 0);
@@ -58,4 +56,63 @@ button#songs {
 .color3:hover {
     background-color: #818181;
     color: rgb(255, 255, 255);
+}
+
+.sbtn {
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    border-left: 2px solid black;
+    z-index: 3;
+    font-family: "go";
+    /* transition: ".5s"; */
+
+    width: 500px;
+    height: 70px;
+    border-right: 2px solid black;
+}
+
+#eom {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-top: 2px solid black;
+    border-top-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+}
+
+#ont {
+    margin-top: 70px;
+    background-color: rgb(255, 50, 94);
+    color: white;
+}
+
+#ots {
+    margin-top: 140px;
+    background-color: rgb(255, 234, 225);
+    color: rgb(255, 160, 157);
+}
+
+#otr {
+    margin-top: 210px;
+    background-color: rgb(153, 153, 153);
+    color: rgb(109, 255, 128);
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 30px;
+
+    border-bottom-right-radius: 30px;
+}
+
+#close {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    margin-top: -15px;
+    margin-left: 430px;
+    z-index: 2;
+    cursor: pointer;
+
+    /* transition: ".5s"; */
 }

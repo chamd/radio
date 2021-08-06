@@ -1,107 +1,70 @@
-body::-webkit-scrollbar { 
-    display: none; 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    zoom: 1.5;
 }
 
 .outer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 @font-face {
-    font-family: 'go';
-    src: url('../font/go.ttf');
+  font-family: "go";
+  src: url("../font/go.ttf");
 }
 
 #songTitle {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 35px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    width: 550px;
-    height: 50px;
-    background: linear-gradient(to right, rgb(0, 140, 255), pink);
-    color: white;
-    font-family: 'go';
-    cursor: default;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 35px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 550px;
+  height: 50px;
+  background: linear-gradient(to right, rgb(0, 140, 255), pink);
+  color: white;
+  font-family: "go";
+  cursor: default;
+}
+
+#volume {
+    cursor: pointer;
 }
 
 #rand {
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-}
-
-.sbtn {
-    margin-left: -560px;
-    height: 100px;
-    width: 60px;
-    text-align: center;
-    border: none;
-    font-size: 20px;
-    position: absolute;
-    cursor: pointer;
-    border-left: 2px solid black;
-    z-index: 3;
-    font-family: 'go';
-}
-
-#eom {
-    background-color: rgb(26, 26, 26);
-    color: white;
-    border-top: 2px solid black;
-    border-top-left-radius: 30px;
-}
-
-#ont {
-    margin-top: 100px;
-    background-color: rgb(255, 50, 94);
-    color: white;
-}
-
-#ots {
-    margin-top: 200px;
-    background-color: rgb(255, 234, 225);
-    color: rgb(255, 160, 157);
-}
-
-#otr {
-    margin-top: 300px;
-    background-color: rgb(153, 153, 153);
-    color: rgb(109, 255, 128);
-    border-bottom: 2px solid black;
-    border-bottom-left-radius: 30px;
-}
-
-#close {
-    position: absolute;
-    color: white;
-    font-size: 50px;
-    margin-top: -15px;
-    margin-left: 430px;
-    z-index: 2;
-    cursor: pointer;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
 }
 
 @font-face {
-    font-family: 'd7';
-    src: url('../font/d72.ttf');
+  font-family: "d7";
+  src: url("../font/d72.ttf");
 }
 
-#time {
-    position: absolute;
-    margin-top: -40px;
-    font-family: d7;
-    font-size: 30px;
-    z-index: 1;
-    cursor: default;
+.time {
+  position: absolute;
+  margin-top: -10px;
+  font-family: d7;
+  font-size: 30px;
+  cursor: default;
+}
+
+#time-time {
+    margin-left: -300px;
+}
+
+#time-duration {
+    margin-right: -300px;
 }
 
 #art {
-    width: 200px;
-    border-radius: 30px;
-    transition: .5s;
+  width: 200px;
+  border-radius: 30px;
 
-    margin-bottom: 0px;
-    height: 0px;
+  margin-bottom: 30px;
+  height: 200px;
 }
