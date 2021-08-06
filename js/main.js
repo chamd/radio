@@ -36,7 +36,7 @@ function change(mod) {
         npL = Mlist;
         np = num;
 
-        document.getElementById("art").src = `../img/${Mlist}.jpg`;
+        document.getElementById("art").src = `./img/${Mlist}.jpg`;
         music.src = `./music/${Mlist}/${data[Mlist][Mlist][num]}`;
         document.getElementById("songTitle").textContent = data[Mlist][Mlist][num].split(".mp3")[0];    
 
