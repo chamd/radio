@@ -24,9 +24,13 @@ function change(mod) {
         var Mlist = listN;
 
         if (mod == -1) {
-            Mlist = parseInt(Math.random() * 4);
-            num = parseInt(Math.random() * data[Mlist][Mlist].length);
-
+            if (repeat == 1) {
+                Mlist = npL;
+                num = np;
+            } else {
+                Mlist = parseInt(Math.random() * 4);
+                num = parseInt(Math.random() * data[Mlist][Mlist].length);
+            }
         } else if (mod == -2) {
             Mlist = npL;
             num = np;

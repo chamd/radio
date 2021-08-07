@@ -7,37 +7,55 @@ body {
 }
 
 .outer {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 @font-face {
-  font-family: "go";
-  src: url("../font/go.ttf");
+    font-family: "go";
+    src: url("../font/go.ttf");
 }
 
 #songTitle {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 35px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  width: 550px;
-  height: 50px;
-  background: linear-gradient(to right, rgb(0, 140, 255), pink);
-  color: white;
-  font-family: "go";
-  cursor: default;
-}
-
-#volume {
-    cursor: pointer;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 35px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 550px;
+    height: 50px;
+    background: linear-gradient(to right, rgb(0, 140, 255), pink);
+    color: white;
+    font-family: "go";
+    cursor: default;
 }
 
 #rand {
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
+    position: absolute;
+    cursor: pointer;
+    font-size: 70px;
+    margin-top: -10px;
+}
+
+.randn {
+    margin-right: -200px;
+}
+
+.randp {
+    margin-left: -200px;
+}
+
+.rr {
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 0;
+}
+
+#volume {
+    position: absolute;
+    cursor: pointer;
+    margin-right: -400px;
+    margin-top: 7px;
 }
 
 #progress {
@@ -55,16 +73,16 @@ body {
 }
 
 @font-face {
-  font-family: "d7";
-  src: url("../font/d72.ttf");
+    font-family: "d7";
+    src: url("../font/d72.ttf");
 }
 
 .time {
-  position: absolute;
-  margin-top: 20px;
-  font-family: d7;
-  font-size: 25px;
-  cursor: default;
+    position: absolute;
+    margin-top: 20px;
+    font-family: d7;
+    font-size: 25px;
+    cursor: default;
 }
 
 #time-time {
@@ -76,9 +94,9 @@ body {
 }
 
 #art {
-  width: 200px;
-  border-radius: 30px;
+    width: 200px;
+    border-radius: 30px;
 
-  margin-bottom: 30px;
-  height: 200px;
+    margin-bottom: 30px;
+    height: 200px;
 }

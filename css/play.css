@@ -1,26 +1,48 @@
 .playbtn {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
-    z-index: 2;
+    box-shadow: 0px 1px 5px rgb(187, 187, 187);
+    border-radius: 50%;
+    margin-top: -5px;
+    z-index: 1;
+}
+
+.playbtn::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: linear-gradient(to right, rgb(168, 216, 255), pink);
+    border-radius: 50%;
+    z-index: -1;
+    transition: opacity .3s linear;
+    opacity: 0;
+}
+
+.playbtn:hover::before {
+    opacity: 1;
 }
 
 .play {
-    display: inline-block;
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #686868;
-    transition: clip-path .3s ease;
+    display: inline-block;
+    width: 5px;
+    height: 30px;
+    background-color: black;
+    border-radius: 10px;
 }
 
 .play1 {
-    clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
-    z-index: 1;
+    transform: translate(19.5px, 15px);
 }
 
 .play2 {
-    clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
-    z-index: 1;
+    transform: translate(30px, 8px) rotate(-57deg);
+}
+
+.play3 {
+    transform: translate(30px, 22px) rotate(57deg);
 }

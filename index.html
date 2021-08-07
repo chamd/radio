@@ -40,34 +40,26 @@
     <br><br>
 
     <div class="outer">
+
+        <span class="rr">
+            <input type="checkbox" id="rri" onclick="raore();">
+            <label id="raore" for="rri"></label>
+        </span>
+
+        <i class='bx bx-skip-previous randp' onclick="change(-1);" id="rand"></i>
+
         <span class="playbtn" onclick="play();">
             <span class="play play1"></span>
             <span class="play play2"></span>
+            <span class="play play3"></span>
         </span>
+
+        <i class='bx bx-skip-next randn' onclick="change(-1);" id="rand"></i>
+
+        <i class='bx bx-volume bx-md' id="volume" onclick="mute();"></i>
     </div>
 
     <br>
-
-    <div class="outer">
-        <img src="./img/rand.png" onclick="change(-1);" id="rand">
-
-        &emsp;&emsp;&emsp;&emsp;
-
-        <img src="img/shuffle.png" id="rr">
-        &nbsp;
-        <input type="checkbox" id="rri" onclick="raore();">
-        <label id="raore" for="rri"></label>
-        &nbsp;
-        <img src="img/repeat.png" id="rr">
-
-        &emsp;&emsp;&emsp;&emsp;
-
-        <i class='bx bx-volume bx-md' id="volume" onclick="mute();"></i>
-
-
-    </div>
-
-    <br><br>
 
     <div class="outer">
         <span id="close" onclick="closeL();">&times;</span>

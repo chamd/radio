@@ -4,14 +4,17 @@ function play() {
         music.play();
         musicP = 1;
     } else if (musicP == 1) {
-        document.querySelector(".play1").style.clipPath = "polygon(0 0, 50% 25%, 50% 75%, 0% 100%)";
-        document.querySelector(".play2").style.clipPath = "polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%)";    
+        $(".play2").css("transform", "translate(30px, 8px) rotate(-57deg)")
+        $(".play3").css("transform", "translate(30px, 22px) rotate(57deg)")
+        $(".play1").css("height", "30px")
         music.pause();
         musicP = 0;
     }
 }
 
 function stop() {
-    document.querySelector(".play1").style.clipPath = "polygon(0 0, 30% 0, 30% 100%, 0% 100%)";
-    document.querySelector(".play2").style.clipPath = "polygon(70% 0, 100% 0, 100% 100%, 70% 100%)";
+    $(".play").css("transition", ".3s")
+    $(".play2").css("transform", "translate(34px, 15px) rotate(0deg)")
+    $(".play3").css("transform", "translate(19.5px, 15px) rotate(0deg)")
+    $(".play1").css("height", "0px")
 }

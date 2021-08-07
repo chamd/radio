@@ -3,35 +3,36 @@
 }
 
 #raore {
-    margin-top: 8px;
+    margin-top: 10px;
     display: inline-block;
-    width: 50px;
-    height: 25px;
+    width: 60px;
+    height: 30px;
     cursor: pointer;
     position: relative;
-    background-color: #0084ff;
+    background: linear-gradient(to right, rgb(0, 140, 255), pink);
     border-radius: 100px;
+    box-shadow: inset 0px 0px 5px rgb(83, 83, 83);
 }
 
 #raore::before {
     content: " ";
     display: block;
-    width: 21px;
-    height: 21px;
+    width: 26px;
+    height: 26px;
     left: 2px;
     bottom: 2px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: white;
+    background-image: url("../img/shuffle.png");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
     transition: all 0.3s ease;
     border-radius: 100px;
+    box-shadow: 0px 1px 5px rgb(0, 0, 0);
 }
 
 #rri:checked + #raore:before {
-    transform: translateX(25px);
-}
-
-#rr {
-    margin-top: 10px;
-    width: 20px;
-    height: 20px;
+    transform: translateX(30px);
+    background-image: url("../img/repeat.png");
 }
