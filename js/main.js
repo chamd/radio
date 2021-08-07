@@ -12,7 +12,6 @@ music.src = "./music/0/Airplane.mp3";
 music.volume = 0.1;
 
 lists(0, 0);
-timeStart();
 
 function change(mod) {
 
@@ -36,9 +35,9 @@ function change(mod) {
         npL = Mlist;
         np = num;
 
-        document.getElementById("art").src = `./img/${Mlist}.jpg`;
+        $("#art").attr("src", `./img/${Mlist}.jpg`);
         music.src = `./music/${Mlist}/${data[Mlist][Mlist][num]}`;
-        document.getElementById("songTitle").textContent = data[Mlist][Mlist][num].split(".mp3")[0];
+        $("#songTitle").text(data[Mlist][Mlist][num].split(".mp3")[0]);
 
         music.play();
         musicP = 1;
@@ -104,10 +103,7 @@ function mute() {
     }
 }
 
-function time() {
-
-    var nbsp = "\u2003\u2003\u2003\u2003"
-
+music.addEventListener("timeupdate", () => {
     var time = {
         "time": parseInt(music.currentTime),
         "duration": parseInt(music.duration)
@@ -122,25 +118,19 @@ function time() {
         "durationS": time.duration % 60
     }
 
-    document.getElementById("duration").max = time.duration;
-    document.getElementById("duration").value = time.time;
+    $("#progressTime").css("width", `${music.currentTime * 400 / music.duration}px`);
 
     if (0 <= time.timeS && time.timeS <= 9) {
-        document.getElementById("time-time").textContent = `${time.timeM}:0${time.timeS}`
+        $("#time-time").text(`${time.timeM}:0${time.timeS}`);
     } else {
-        document.getElementById("time-time").textContent = `${time.timeM}:${time.timeS}`
+        $("#time-time").text(`${time.timeM}:${time.timeS}`);
     } if (0 <= time.durationM && time.durationS <= 9) {
-        document.getElementById("time-duration").textContent = `${time.durationM}:0${time.durationS}`
+        $("#time-duration").text(`${time.durationM}:0${time.durationS}`);
     } else {
-        document.getElementById("time-duration").textContent = `${time.durationM}:${time.durationS}`
+        $("#time-duration").text(`${time.durationM}:${time.durationS}`);
     }
-}
 
-function timeStart() {
-    setInterval(function () {
-        time();
-    }, 1000);
-}
+})
 
 function raore() {
     if (repeat == 0) {
@@ -151,8 +141,8 @@ function raore() {
 }
 
 function closeL() {
-    document.getElementById("eom").style.borderTopRightRadius = "30px";
-    document.getElementById("otr").style.borderBottomRightRadius = "30px";
+    $("#eom").css("border-top-right-radius", "30px");
+    $("#otr").css("border-bottom-right-radius", "30px");
 
     var e = document.querySelectorAll(".sbtn");
     for (var i = 0; i < e.length; i++) {
@@ -162,25 +152,25 @@ function closeL() {
         e[i].style.borderRight = "2px solid black";
         e[i].style.transform = `translate(0, 0)`;
         setTimeout(() => {
-            document.getElementById("eom").textContent = "Eyes On Me";
-            document.getElementById("ont").textContent = "Oneiric Theater";
-            document.getElementById("ots").textContent = "One The Story";
-            document.getElementById("otr").textContent = "Others";
+            $("#eom").text("Eyes On Me");
+            $("#ont").text("Oneiric Theater");
+            $("#ots").text("One The Story");
+            $("#otr").text("Others");
         }, 100);
     }
 
     closeLl();
 
-    document.getElementById("art").style.marginBottom = "30px";
-    document.getElementById("art").style.height = "200px";
+    $("#art").css("margin-bottom", "30px");
+    $("#art").css("height", "200px");
 
     close = 1;
 
 }
 
 function openL() {
-    document.getElementById("eom").style.borderTopRightRadius = "0";
-    document.getElementById("otr").style.borderBottomRightRadius = "0";
+    $("#eom").css("border-top-right-radius", "0px");
+    $("#otr").css("border-bottom-right-radius", "0px");
 
     var e = document.querySelectorAll(".sbtn");
     for (var i = 0; i < e.length; i++) {
@@ -190,10 +180,10 @@ function openL() {
         e[i].style.borderRight = "none";
         e[i].style.transform = `translate(-280px, ${i * 30}px)`;
         setTimeout(() => {
-            document.getElementById("eom").textContent = "EOM";
-            document.getElementById("ont").textContent = "ONT";
-            document.getElementById("ots").textContent = "OTS";
-            document.getElementById("otr").textContent = "OTR";
+            $("#eom").text("EOM");
+            $("#ont").text("ONT");
+            $("#ots").text("OTS");
+            $("#otr").text("OTR");
         }, 50);
     }
 
@@ -205,9 +195,9 @@ function openL() {
         setTimeout(timeL, 100, e, i);
     }
 
-    document.getElementById("art").style.marginBottom = "0px";
-    document.getElementById("art").style.height = "0px";
-    document.getElementById("art").style.transition = "0.5s";
+    $("#art").css("margin-bottom", "0px");
+    $("#art").css("height", "0px");
+    $("#art").css("transition", ".5s");
 
     close = 0;
 }
@@ -215,13 +205,14 @@ function openL() {
 function timeL(e, i) {
     e[i].style.width = "500px";
     e[i].style.transform = `translateY(0)`;
-    document.getElementById("close").style.transform = "translateX(0)";
-    document.getElementById("close").style.transition = ".4s";
+    $("#close").css("transform", "translateX(0)");
+    $("#close").css("transition", ".4s");
+
 }
 
 function closeLl() {
 
-    document.getElementById("close").style.transform = "translateX(-50px)";
+    $("#close").css("transform", "translateX(-50px)");
 
     var e = document.querySelectorAll("button#songs");
     for (var i = 0; i < e.length; i++) {

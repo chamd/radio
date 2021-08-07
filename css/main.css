@@ -40,6 +40,20 @@ body {
   cursor: pointer;
 }
 
+#progress {
+    width: 400px;
+    height: 7px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+}
+
+#progressTime {
+    width: 0px;
+    height: 7px;
+    background: linear-gradient(to right, rgb(0, 140, 255), pink);
+    border-radius: 10px;
+}
+
 @font-face {
   font-family: "d7";
   src: url("../font/d72.ttf");
@@ -47,18 +61,18 @@ body {
 
 .time {
   position: absolute;
-  margin-top: -10px;
+  margin-top: 20px;
   font-family: d7;
-  font-size: 30px;
+  font-size: 25px;
   cursor: default;
 }
 
 #time-time {
-    margin-left: -300px;
+    margin-left: -350px;
 }
 
 #time-duration {
-    margin-right: -300px;
+    margin-right: -350px;
 }
 
 #art {
